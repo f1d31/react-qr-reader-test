@@ -14,7 +14,7 @@ function App() {
     <div style={{ maxWidth: "300px" }}>
       <QrReader
         delay={300}
-        onResult={(result, error) => {
+        onResult={(result: { text: string; }, error: string) => {
           if (!!result) {
             setReadCode(result?.text);
           }
